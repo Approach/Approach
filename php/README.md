@@ -1,6 +1,6 @@
-====================================================================================
-============================GETTING STARTED WITH APPROACH==============================
-====================================================================================
+========================================================
+====================GETTING STARTED WITH APPROACH==============
+========================================================
 
 Rename project directory to yoursite.name and place it in your web server directory along with approach.
 /var/www/approach
@@ -17,14 +17,14 @@ Route NO TRAFFIC to /support directory, this is only for your application's use 
 
 We use the following generalized setup in nginx:
 
-www.root-domain.com and root-domain.com --> map.php
-static.root-domain.com --> /static/$request_uri
-service.root-domain.com --> /service/$request_uri
+www.root-domain.com and root-domain.com ==> map.php
+static.root-domain.com ==> /static/$request_uri
+service.root-domain.com ==> /service/$request_uri
 
-chmod 1700 --> composition (or 750, 770 if needed)
-chmod 1700 --> support (or 750, 770 if needed)
-chmod 1704 --> service (or 754, 774 if needed)
-chmod 1704 --> static (or 754, 774 if needed)
+chmod 1700 ==> composition (or 750, 770 if needed)
+chmod 1700 ==> support (or 750, 770 if needed)
+chmod 1704 ==> service (or 754, 774 if needed)
+chmod 1704 ==> static (or 754, 774 if needed)
 
 You may be able to make your server such that your application does not need write access.
 If this is the case, you may be able to secure Approach further, or if you do not require execute to navigate.
@@ -33,9 +33,9 @@ If this is the case, you may be able to secure Approach further, or if you do no
 The /composition/ directory will be navigated by RouteFromURL() and ResolveComposition().
 There are many ways of editing these two functions, in core.php, to customize your routing pattern.
 
-====================================================================================
-=============================URL ROUTING AND COMPOSITIONS==============================
-====================================================================================
+========================================================
+====================URL ROUTING AND COMPOSITIONS===============
+========================================================
 
 By default, each row in the "compositions" table has an alias, a parent id, and a type id.
 See the "types" table and the "compositions" table for more information.
@@ -71,21 +71,21 @@ Combined with the routing rules, this provides a powerful, typed-url system. You
 Composition::$Active->DOM . Call Compositin::$Active-prepublish() to resolve current components and handle rendering manually.
 
 
-====================================================================================
-================================DIRECT ROUTING TO SCRIPTS==============================
-====================================================================================
+========================================================
+====================DIRECT ROUTING TO SCRIPTS==================
+========================================================
 
 While this is the default project shipped with Approach, it is by no means the primary way of using the Approach classes.
 The default project only serves as a springboard for community ideas and a move toward layout and component standards.
 
 You may also begin with standard, direct URL paths, define 
 
-===================================================
-----------------------------Layout.php---------------------------
-===================================================
+==========================================================
+								Layout.php
+==========================================================
 
 <?php
-require_once('core.php);
+require_once('core.php');
 
 $html = new renderable('html'); //$html variable name is optional
 
@@ -102,9 +102,9 @@ $body->children[] = $Main = new renderable('div');
 
 ?>
 
-===================================================
------------------------------index.php----------------------------
-===================================================
+==========================================================
+								index.php
+==========================================================
 
 <?php
 require('layout.php');
@@ -120,9 +120,9 @@ print_r( '<!DOCTYPE html>'.$html->render() ); //or echo, for instance.
 ?>
 
 
-====================================================================================
-===============================COMPOSITION VS RENDERABLE==============================
-====================================================================================
+========================================================
+====================COMPOSITION VS RENDERABLE=================
+========================================================
 
 The choice of not using a Composition has the following effects.
 
@@ -138,16 +138,16 @@ Composition which, along with Component, primarily do the same things you would 
 While they're doing that, they also exist as robust entry points for Service to poke around and provide your site an API automatically.
 
 
-====================================================================================
+========================================================
 								More Information
-====================================================================================
+========================================================
 
 https://approach.im/
 https://github.com/Approach
 
 support@approach.im
 
-====================================================================================
+========================================================
 			Approach is (C) 2002 - 2014 Garet Claborn and Approach Corporation
-====================================================================================
+========================================================
 
