@@ -1,5 +1,5 @@
 ========================================================
-====================GETTING STARTED WITH APPROACH==============
+GETTING STARTED WITH APPROACH =============
 ========================================================
 
 Rename project directory to yoursite.name and place it in your web server directory along with approach.
@@ -34,7 +34,7 @@ The /composition/ directory will be navigated by RouteFromURL() and ResolveCompo
 There are many ways of editing these two functions, in core.php, to customize your routing pattern.
 
 ========================================================
-====================URL ROUTING AND COMPOSITIONS===============
+URL ROUTING AND COMPOSITIONS ==============
 ========================================================
 
 By default, each row in the "compositions" table has an alias, a parent id, and a type id.
@@ -72,7 +72,7 @@ Composition::$Active->DOM . Call Compositin::$Active-prepublish() to resolve cur
 
 
 ========================================================
-====================DIRECT ROUTING TO SCRIPTS==================
+ DIRECT ROUTING TO SCRIPTS =================
 ========================================================
 
 While this is the default project shipped with Approach, it is by no means the primary way of using the Approach classes.
@@ -121,7 +121,7 @@ print_r( '<!DOCTYPE html>'.$html->render() ); //or echo, for instance.
 
 
 ========================================================
-====================COMPOSITION VS RENDERABLE=================
+COMPOSITION VS RENDERABLE
 ========================================================
 
 The choice of not using a Composition has the following effects.
@@ -139,7 +139,7 @@ While they're doing that, they also exist as robust entry points for Service to 
 
 
 ========================================================
-								More Information
+More Information
 ========================================================
 
 https://approach.im/
